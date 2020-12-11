@@ -1,0 +1,425 @@
+:root{
+    /* There are 2 light blues that are essentially the same ? 
+     --lightblue2: rgb(0, 129, 172); **/
+    --lightblue: #00ACE3;
+    --bluegray: #456488;
+    --darkblue: #253340;
+    --superdarkblue: #111826;
+    --orange: #FF9A00;
+    --gray: #555555;
+    /*fonts*/
+    --bodyfont: 'airbnb_cereal_appbook';
+    --boldfont: 'airbnb_cereal_appbold';
+    --mediumfont: 'airbnb_cereal_appmedium';
+    --lightfont: 'airbnb_cereal_applight';
+    --blackfont: 'airbnb_cereal_appblack';
+}
+
+@font-face {
+    font-family: 'airbnb_cereal_appblack';
+    src: url('../font/airbnbcerealblack-webfont.woff2') format('woff2'),
+         url('../font/airbnbcerealblack-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'airbnb_cereal_appbold';
+    src: url('../font/airbnbcerealbold-webfont.woff2') format('woff2'),
+         url('../font/airbnbcerealbold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'airbnb_cereal_appbook';
+    src: url('../font/airbnbcerealbook-webfont.woff2') format('woff2'),
+         url('../font/airbnbcerealbook-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'airbnb_cereal_appextra_bold';
+    src: url('../font/airbnbcerealextrabold-webfont.woff2') format('woff2'),
+         url('../font/airbnbcerealextrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'airbnb_cereal_applight';
+    src: url('../font/airbnbcereallight-webfont.woff2') format('woff2'),
+         url('../font/airbnbcereallight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'airbnb_cereal_appmedium';
+    src: url('../font/airbnbcerealmedium-webfont.woff2') format('woff2'),
+         url('../font/sairbnbcerealmedium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* _________ */
+body {
+    background-color: #526E5F;
+    overflow-x: hidden;
+}
+
+@media only screen and (orientation:portrait){
+   
+    .screen_change {
+        display: none;
+    }
+
+}
+
+@media only screen and (orientation:landscape){
+    .screen_change{
+        display: block;
+    }
+
+    .landscape_content  {
+        position: absolute;
+        z-index: 120;
+
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 80%;
+        text-align: center;
+        color: white;
+        
+    }
+    .landscape_content img{
+        width: 70%;
+    }
+
+
+    .landscape_bg {
+        position: fixed;
+        z-index: 110;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.829);
+    }
+}
+
+.start_page {
+    text-align: center;
+    font-family: var(--mediumfont) ;
+}
+
+.question{
+    margin-top: 2.5em;
+    color: #F6FFB4;
+    font-size: 1.1em;
+}
+
+#backbutton {
+    position: absolute;
+    z-index: 90;
+    top: 9px;
+    left: 0;
+    background-color: transparent;
+    margin: 36px 32px;
+    opacity: 0;
+    transition: all 2s ease-in-out 1.2s;
+
+}
+.chosen_plant_name {
+    opacity: 0;
+    position: absolute;
+    z-index: 90;
+    top: 9px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 2em;
+    color: #6A917C;
+
+    transition: all 2s ease-in-out 1.2s;
+}
+
+.plant_show {
+    position: relative;
+    z-index: 20;
+
+    text-align: center;
+}
+
+#blob {
+    opacity: 1;
+    /* transition: all 1s ease-in-out; */
+}
+
+#blob, #plantimg {
+    margin-top: 1em;
+}
+
+#blob, #plantimg, #plant_bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.plant_bg,.plant_bg_appear {
+    margin-top: 7em;
+    width: 100%;
+}
+.plant_bg {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.plant_bg_appear {
+    width: 100%;
+
+    margin-top: 7em;
+    opacity: 1;
+    transition: all 1.4s ease-in-out 0.5s;
+}
+.plant_bg_appear img{
+    width: 100%;
+}
+
+#plantimg {
+    margin-top: 2em;
+}
+#plantimg img {
+    width: 90%;
+}
+
+
+.white_circle,.whitebackground {
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background-color: white;
+
+    position: absolute;
+    /* z-index: 10; */
+    left: 50%;
+    margin-left: -400px;
+    margin-bottom: -600px;
+    bottom: 0;
+
+    transform: (1);
+    transition: all 1.3s ease-in-out;
+    overflow-x: hidden;
+}
+.white_circle {
+    transform: scale(1);
+}
+
+/* add whitebackground class name when "My Plant" is selected */
+.whitebackground {
+    transform: scale(3);
+
+}
+
+
+.choose_plant {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1.5em;
+    z-index: 80;
+
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+.plant_name {
+    font-size: 1.8em;
+    color: #6A917C;
+}
+.my_plant {
+    margin-top: 2em;
+
+    background-color: #FD7D7D;
+    border-radius: 10em;
+
+    box-shadow: 0px 0px 30px 7px rgba(102, 102, 102, 0.144);
+}
+.my_plant p{
+    padding: 10px 20px;
+    margin: 0;
+
+    color: white;
+    font-size: 1.1em;
+}
+
+.chosen_plant {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 400px;
+    z-index: 70;
+
+    transform: translateY(100px);
+    transition: all 2s ease-in-out 1.2s;
+}
+
+
+.main_circle  {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transform: translateY(100px);
+    transition: all 2s ease-in-out 1.5s;
+}
+.main_circle_after {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transform: translateY(0px);
+    transition: all 2s ease-in-out 1.5s;
+}
+.inner_circle {
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -4px;
+
+    height: 188px;
+    width: 188px;
+
+    filter: drop-shadow( 0px 0px 5px rgba(44, 44, 44, 0.199));
+}
+.days_left{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.progress_circle{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 200px;
+    transition: all 1.5s ease-in-out 1.4s;
+}
+.circle {
+    stroke: #FFD5BF;
+    stroke-width: 12px;
+    stroke-linecap: round;
+
+    background: linear-gradient(185deg, rgba(255,142,142,1) 0%, rgba(226,142,142,1) 100%);
+    stroke-dasharray: 590.62 590.62;
+
+    transition: stroke-dashoffset 1s ease-in-out;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke-dashoffset: 590.62;
+}
+
+
+.submit {
+    background: none;
+    font-size: 1em;
+    color: white;
+    padding: 0.5em;
+
+    border: 2px solid white;    
+    border-radius: 30px;
+    
+    margin-bottom: -1em;
+    width: 40px;
+    text-align: center;
+}
+
+input[type=date] {
+    border-image: none; 
+    border: none;
+    border-radius: 40px;
+
+    background-color: rgba(255, 255, 255, 0.644);   
+    
+    padding: 0.3em 0.5em;
+    width:160px;
+    margin-bottom: 1.2em;
+    display: block;
+    text-align: center;
+}
+
+
+#dateContainer {
+    display: block;
+}
+#days {
+    display: none;
+    margin-top: -1em;
+    color: white;
+}
+#daysLeft {
+    font-size: 5em;
+}
+#text {
+    font-size: 1.2em;
+    margin: -0.7em 0 0 0;
+}
+#date_prompt {
+    display: block;
+    color: #33CFDD;
+}
+#resetbutton {
+    display: none;
+    margin: 1em auto;
+
+    background-color: #FD7D7D;
+    color: white;
+    padding: 0.8em 2.2em;
+    border-radius: 300px;
+}
+
+#waterNow {
+    display: none;
+    margin-top: -15px;
+}
+#waterNow p{
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.205);
+    margin-top: -1em;
+}
+#removebutton {
+    display: none;
+    margin: 1em auto;  
+
+    background-color: #FFD5BF;
+    padding: 0em 2em;
+    border-radius: 30px;
+}
+
+/* PLANT INFO SECTION */
+.plant_info {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 3em auto;
+}
+.each_info {
+    width: 33.33%;
+    text-align: center;
+}
+
+#sunlight img{
+    width: 40%;
+}
+#water img{
+    width: 26%;
+}
+#temp img {
+    width: 20%;
+}
+

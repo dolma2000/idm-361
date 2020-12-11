@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow App</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="blob.css">
+</head>
+<body>
+   
+    
+    <div class="heroimage">
+        <img src="img/hero-01.jpg" alt="">
+        <p>Over the course of 7 weeks, I created a web app called “Grow” that is designed to help users keep track of the days left before they water their plant.</p>
+    </div>
+    
+
+
+    <div class="main-textbox">
+        <p class="title">Overview</p>
+        <p>This project is for my Interactive App 1 course where I was assigned to design and develop a good user experience for a mobile web app. I was motivated to create my “Grow” app with the hope to prevent another college student from letting their plants die…including me. This app is built with HTML, CSS, and JavaScript, and utilizes the local storage to store user inputted data.</p>
+        
+        <h2 id="subtitle">Background</h2>
+         
+        <div class="myplant">
+            <div id="myplanttext" >
+                <p><b>Why this Idea?</b></p>
+                <p>Ever since the pandemic started, I have grown my obsession for plants and now own 5 of them in my room; Ella, Coco, Eduard, Soju, and Soju Jr. Something about the idea of witnessing a living thing grow as time passes appealed to me as a great personal experience – perhaps it’s the work of the biophilia effect, or maybe it’s how it serves as a sign of hope for me during this epidemic season. Either way, I hope this can encourage people to care for their plants more.</p>
+            </div>
+            <div id="myplantimg">
+                <img src="img/myplant.png" alt="">
+            </div>
+        </div>
+
+        <p><b>Target Audience:</b>College Females</p>
+        
+        <p><b>The Problem:</b> Owning a succulent plant is such an “aesthetic” and “Pinterest” thing for us college girls, but within months, they die. Why?</p>
+        <ul>
+            <li><b>Lack of plant care knowledge</b></li>
+            <li><b>Busy Lifestyle</b></li>
+        </ul>
+     
+        <p><b>Solution:</b> An app where you can keep track of how many days left before you water your succulent plant. Users can select what their succulent type is, and then input the date they last watered the plant. Once they enter the date, it will calculate how many days left before you water your plant.</p>
+        
+        <p><b>Goal: code the main functionality of the app successfully</b> by the end of this course</p>
+        <ul>
+            <li>Entering the date and storing it to local storage</li>
+            <li>Calculating the days left to water</li>
+            <li>Removing the days left</li>
+        </ul>
+        
+        <p><b>Timeline:</b> 7 weeks</p>
+    </div>
+
+
+
+    <div class="alpha">
+        <div class="alpha-header">
+            <h1>DESIGN DECISION</h1>
+        </div>
+
+        <div class="main-textbox alpha-text">
+            <p class="title">Process and Insights</p>
+        </div>
+
+        <div class="wide-textbox" id="two_column">
+            
+            <div>
+                <h2 id="subtitle">App’s Aesthetic + Style Guide</h2>
+                <p>I always start with the colors as they are a powerful mood setter for a product’s image. On the right are different color themes I found through exploring on color.adobe.com, which inspired my finalized color theme that reflected the <b>feeling of nature and home</b> I wanted to portray. </p>
+            </div>
+            <div class="image">
+                <img src="img/color.png" alt="">
+                <figcaption>The top two color themes inspired my final color theme.</figcaption>
+            </div>
+            
+        </div>
+
+        
+
+        <div class="wide-textbox" >
+
+            <div class="image" id="styleguide">
+                <img src="img/style_guide.png" alt="">
+                <figcaption>"Grow"'s Style Guide</figcaption>
+            </div>
+             <p>This style guide is where I established the font and color chosen, how the hierarchy of text should be displayed, and what a call-to-action button should look like. The images of the leaves illustration portrays the style and color (pink and green) I would like to pursue.</p>
+
+
+             <h2 id="subtitle">Logo</h2>
+             <p>My logo is based off my aloe plant "Ella" shown before. I first did an observational drawing of her with pencil and pen to understand the overall shape and texture she displays. Then I began to simplify her shapes through sketches that will be used for the logo. As this is for the icon design in the homepage, I made sure the lines weren't too thin so they dissappear, but also detailed enough so the shape can be perceived as an aloe plant.</p>
+            <div class="image" id="logo_sketch">
+                <div>
+                    <img src="img/logo-sketch.png" alt="">
+                    <img src="img/logo-finalstep.png" alt="">
+                </div>
+                <figcaption>Process journey of designing final logo</figcaption>
+            </div>
+
+
+            <h2 id="subtitle">Deploying the Logo Icon</h2>
+            <p>To specify the icon for the web app browser, within the head tag I added a link tag :</p>
+            <div class="code_text">
+                <p> < link rel="apple-touch-icon" href="img/apple-touch-icon.png" > </p>
+            </div>
+
+            <p>And to specify multiple icons for different device resolutions, I added a “sizes” attribute to each link elements as followed:</p>
+            <div class="code_text">
+                <p>< link rel="apple-touch-icon" sizes="180x180" href="img/grow_logo_180x180.png" >
+                <br>< link rel="apple-touch-icon" sizes="114x114" href="img/grow_logo_114x114.png" >
+                <br>< link rel="apple-touch-icon" sizes="57x57" href="img/grow_logo_57x57.png" ></p>
+            </div>
+
+            <p>This way, when someone adds my webpage to their mobile homescreen, this icon is used.</p>
+            <div class="image" id="logo_deployed">
+                <img src="img/logo_deployed.png" alt="">
+                <figcaption>Logo as seen on the mobile homepage.</figcaption>
+            </div>
+
+
+            <h2 id="subtitle">Wireframe</h2>
+            <p>I wanted my UI to overall embody a natural look with organic elements and predominantly with green and its complementary counter part, pink colors.</p>
+            
+        </div>
+
+        <div class="image" id="wireframes">
+            <img src="img/wireframe.jpg" alt="">
+            <figcaption>Mockup up preview of the finalized wireframes.</figcaption>
+        </div>
+
+        <div class="wide-textbox" >
+
+            <p>I also explored different arrangement of colors and different UI design.</p>
+
+            <div class="image" id="designoptions">
+                <div id="designoptions_display">
+                    <img src="img/coloroptions.png" alt="">
+                    <img src="img/waterdesigns.png" alt="">
+                </div>
+                <figcaption>Exploration of UI designs</figcaption>
+            </div>
+
+        </div>
+
+    
+    <!-- CODE AND DEVELOPMENT -->
+    
+    <div class="alpha" id="code">
+
+        <div class="code-header">
+            <h1>DEVELOPMENT</h1>
+        </div>
+
+        <div class="wide-textbox alpha-text">
+            <h2 id="subtitle">Add to Home Functionality</h2>
+            <p>This functionality is important to guide user into “installing” the mobile web app to fully use it like an app outside of the browser. By doing this, user can access the web from their mobile home page. </p>
+            <p>I used a JS framework that has all the functionality to prompt user to add the app to their home page.</p>
+            <div class="image" id="addtohome">
+                <img src="gif/addtohome.gif" alt="">
+                <figcaption>Add to Home functionality in action!</figcaption>
+            </div>
+
+
+            <h2 id="subtitle">Local Storage</h2>
+            <p>The local storage is needed to store the last date the plant was watered, and how many days left. To do this, there are three JavaScript functions required:</p>
+            <ul id="code_list">
+                <li>readData() : to see if there is any stored in the local storage</li>
+                <li>writeData() : to store new data in the local storage</li>
+                <li>removeData() : to remove all the data so new data can be stored </li>
+            </ul>
+
+            <p>In local storage, the “key” is the name of the data stored, and “value” is the data stored. 
+                Since we are storing two keys, one for date last watered and other for days left, the two keys are “dys_DateWatered” and “dys_daysLeft”.
+            </p>
+            <div class="image" id="localstorage">
+                <img src="img/localstorage.png" alt="">
+                <figcaption>Screenshot of the local storage in inspector mode.</figcaption>
+            </div>
+
+            <p>Upon clicking “Go”, the inputted date in the date form is stored as the value for the “dys_DateWatered” through the writeData() function.</p>
+            <div class="code_text">
+                <p>localStorage.dys_DateWatered = dateInput.value;</p>
+            </div>
+
+            <p>At the same time, the days left to water the plant is calculated and stored as the value for the key “dys_daysLeft”.</p>
+            <div class="code_text">
+                <p>localStorage.dys_daysLeft = daysLeft;</p>
+            </div>
+
+
+            <h2 id="subtitle">Cache</h2>
+            <p>Application cache is needed so the app can be accessed offline just like native apps. The Application Cache file lets me specify which files should be cached and accessible offline. “cache-manifest” is a text file where I list all of the files and this file must be accessed in the <html> tag :</p>
+            <div class="code_text">
+                <p>< html manifest="cache.manifest" lang="en"></p>
+            </div>
+            <p>This is so that when a browser sees a manifest attribute, it downloads the manifest file and attempts to cache all the files listed. So if a user opens a locally stored web app offline, it uses the already cached files. When online, the browser reads the cache.manifest file and if updates  have been made then it will download the entire cache again to save the updated changes. 
+                Because the cache.manifest file has been downloaded, even if the browser is offline, it can still be accessed.
+                </p>
+            
+            <div class="video image" id="cache">
+                <video controls  >
+                    <source src="videos/cache.mov" type=video/mp4>
+                </video>
+                <figcaption>offline but can still be viewed on browser and on mobile home page</figcaption>
+            </div>
+
+
+            <h2 id="subtitle">Progress Bar</h2>
+            <p>This was a new challenge for me because I have never coded a functional progress bar, but it was an exciting take on.</p>
+            <p>Through my research, I found that the progress bar can be built by adding a <circle> element within an < svg > element and altering the circle’s stroke through the “strokeDashoffset” property.</p>
+
+            <div class="video image" id="stroke">
+                <video controls  >
+                    <source src="videos/stroke_demo.mov" type=video/mp4>
+                </video>
+                <figcaption>altering the stroke dash offset in the inspector</figcaption>
+            </div>
+
+            <p>The challenge was to figure out how to have the daysleft affect the progression of the progress bar. To do this, I created a function called “setProgress()”.</p>
+            <div class="image" id="setprogress">
+                <img src="img/setProgress.png" alt="">
+                <figcaption>Javascript of the function setProgress()</figcaption>
+            </div>
+            <p>The strokedashoffset defines the location along the svg path of the circle where the stroke begins. The higher the value of the strokedashoffset, the further along the path the stroke will begin. And if the value equals to the circumference of the circle, then it disappears. To calculate the value, I created a constant “offset” where I divide the days left with 14, where after every 14 days you should be watering your plant. Then I multiply this with the circumference of the circle which is 590.62. This value is then set to the strokeDashoffset property. The function is executed when the user clicks on “Go” and “Remove 1 Day” button.</p>
+            <p>After 14 days, a button appears which you click on after you watered your plant. Then the cycle and the progress bar restarts.</p>     
+
+            <div class="video image" id="waterday">
+                <video controls  >
+                    <source src="videos/waterday.mov" type=video/mp4>
+                </video>
+                <figcaption>When the cycle is complete, the prompt button to water your plant appears.</figcaption>
+            </div>
+
+        </div>
+    </div>
+
+<!-- CHALLENGES DEBUGGING -->
+
+
+    <div class="alpha" id="challenges">
+        
+        <div class="alpha-header">
+            <h1>DEBUGGING</h1>
+        </div>
+
+        <div class="main-textbox alpha-text">
+            <p class="title">Challenges Encountered</p>
+            
+            <h2 id="subtitle">Calculating the Day Left</h2>
+            <p>One of the challenge I encountered was calculating the days left till the next watered date..</p>
+            <p>At first I wrote on paper a possible equation to derive the days left from the watered date.
+                In the end I came up with something like this:
+            </p>
+
+            <div class="image" id="equationsketch">
+                <img src="img/equationsketch.png" alt="">
+                <figcaption>Writing down challenging issues helps me out best.</figcaption>
+            </div>
+
+            <p>The issue is, I didn’t know that when you subtract the deadline from todayDate then it becomes milliseconds. </p>
+            <p><b>e.g. 426435311ms</b></p>
+
+            <p>Fortunately, all that was needed to convert ms to days was simple a calculation using an equation I found online.</p>
+            <p><b>e.g 4.9355938773148145 days</b></p>
+
+            <p>The value resulted in decimals so I round it to the nearest whole number, which finally is the days left.</p>
+            <p><b>e.g. 5 days left </b></p>
+
+
+            <h2 id="subtitle">Remove 1 Day Button</h2>
+            <p>This button is added to so that when a day passes, user can manually change the days left by one day less. The issue is that when the user removes a day, exit out of the app and opens it again, the days left does not show the removed days left value. </p>
+            <p>I realized the issue is that this button does not update the value of the key “dys_daysLeft” in the local storage. To solve this, in the same function that removes the day left value, I added another line of code that stores the new days left value into the local storage. Now, everytime a day is taken off and the users exit and enters the app, that new value remains.</p>
+        </div>
+        
+    </div>
+</div>
+
+    <div class="main-textbox" id="end">
+        <p class="title">End Result</p>
+        <p id="center"><b>Check out my web app so far by clicking on the blob!</b></p>
+    </div>
+
+    <div class="result-link">
+        
+
+        <a href="http://www.dolmayangchensherpa.com/idm361/grow_app/" target="blank">
+            <div class="blob" >
+            <div></div>
+            <p>Grow App</p>
+        </div></a>
+    </div>
+
+    <div class="main-textbox">
+        <p>Overall, I managed to achieve my goal of developing the main functionality of the app: it is able to record the last date the plant was watered, it calculates and displays the days left till you the next water day, the progress bar also responds to changing days left, and the data of the date watered and days left can be stored in the local storage. Below the blue circle are additional necessary information to ensure the best care you can give to your plant for a healthy and speedy growth.</p>
+        
+        <h2 id="subtitle">Conclusions</h2>
+        <p>Yet another project that increased my coding capabilities; I have learnt how to animate a progress bar on CSS and how to make it dynamic through Javascript, I also learnt how to store inputted data into local storage, how to remove them, and how to read the local storage, and finally how to make the app function offline through application cache. For next steps, I want the days left to countdown by itself and integrate a reminder notification system telling user to water their plant, I also want to include the other succulent plant options other than aloe such as Echeverias, Jade Plant, and Zebra Plant. If possible, I would love to launch this as an official web app for anybody to use to help keep track of watering their plant! </p>
+    </div>
+
+
+</body>
+</html>

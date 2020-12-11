@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+
+
+.heroimage {
+    position: relative;
+}
+.heroimage img {
+    width: 100%;
+}
+.heroimage p {
+    position: absolute;
+    bottom: 10%;
+
+    width: 24%;
+    margin-left: 100px ;
+
+    font-family: 'bebas_neueregular';
+    color: #365243;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+
+
+/* overview */
+
+.main-textbox {
+    margin: 3em auto;
+    width: 50%;
+}
+.title {
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+    color: #365243;
+}
+p{
+    color: #0A4171;
+    line-height: 1.5em;
+    margin: 1.5em 0;
+    font-weight: light;
+}
+#subtitle {
+    font-size: 1.5em;
+    color:#FD7D7D;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 2em;
+}
+.wide-textbox {
+    margin: 3em auto;
+    width: 60%;
+}
+.image {
+    text-align: center;
+}
+.image figcaption {
+    margin-top: 0.5em;
+    font-style: italic;
+    opacity: 0.6;
+    color: rgb(17, 18, 75);
+}
+.code_text {
+    background: rgb(36, 36, 36);
+    padding: 0.2em 1em;
+    border-radius: 10px;
+    margin-bottom: 3em;
+}
+.code_text p {
+    color: white;
+}
+
+
+.myplant {
+    display: flex;
+}
+
+ul {
+    margin-left: 3em;
+}
+#myplanttext {
+    width: 50%;
+    padding-right: 2em;
+}
+#myplantimg  {
+    width: 50%;
+    align-self: center;
+}
+.myplant img{
+    width: 100%;
+    height: auto;
+}
+
+/* PROCESS AND INSIGHTS */
+.alpha {
+    position: relative;
+    z-index: 10;
+    background-color:#FFF1E8;
+    padding-bottom: 2em;
+}
+.alpha-header{
+    position: relative;
+    top: -0.6em;
+    font-size: 5em;
+    font-weight: bold;
+    opacity: 0.5;
+    color: white;
+}
+.main-textbox a {
+    text-decoration: none;
+    color: pink;
+}
+
+#two_column {
+    display: grid;
+    grid-template-columns: 40% 70%;
+}
+#two_column div:nth-child(1){
+    padding-right: 4em;
+}
+#two_column img {
+    width: 100%;
+}
+
+#styleguide img{
+    width: 100%;
+}
+
+#logo_sketch img{
+    width: 90%;
+    margin-bottom: 1em;
+}
+#logo_deployed img{
+    width: 50%;
+}
+
+#wireframes img {
+    width: 80%;
+}
+
+#designoptions {
+    width: 100%;
+}
+
+#designoptions img{
+    height: 500px;
+    margin-right: 2em;
+}
+
+#designoptions_display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.code-header{
+    position: relative;
+    top: -1em;
+    margin-bottom: -0.6em;
+    font-size: 5em;
+    font-weight: bold;
+    opacity: 0.5;
+    color: white;
+}
+#code {
+    background-color: #251e47;
+    padding-top: 2em;
+}
+#code p{
+    color: rgb(201, 201, 201);
+}
+#code figcaption {
+    color: white;
+}
+
+#addtohome img {
+    width: 40%;
+}
+
+#code_list li {
+    color: white;
+}
+
+#localstorage img {
+    width: 70%;
+}
+
+.video {
+    text-align: center;
+}
+
+#cache video {
+    width: 30%;
+}
+#stroke video {
+    width: 50%;
+}
+
+#setprogress img {
+    width: 70%;
+}
+#waterday video {
+    width: 30%;
+}
+
+#equationsketch img{
+    width: 60%;
+}
+
+#challenges {
+    background-color: #365243;
+    position: relative;
+    z-index: 5;
+}
+
+#challenges p{
+    color: rgb(201, 201, 201);
+}
+
+
+
+
+#end {
+    padding-top: 3em;
+}
+.result-link {
+    width: 80%;
+    margin: 0 auto;
+}
+.result-link a {
+    color: black;
+    margin: 0 auto;
+}
+
+#center  {
+    text-align: center;
+    color: #FD7D7D;
+}
+
+

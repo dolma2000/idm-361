@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest" lang="en">
+<head>
+    
+    <title>Grow</title>
+	<!-- META -->
+	<!-- Requirements for developing a WEB APP -->
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	<!-- Make the status bar black -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	
+	<!-- Make the app tittle different form the web page title -->
+	<meta name="apple-mobile-web-app-title" content="Grow">
+
+	<!-- Disable auto phone number detection -->
+	<meta name="format-detection" content="telephone=no">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/css-normalize.css">
+    <link rel="stylesheet" href="css/css-add2home.css">
+
+
+    <!-- FOR ADDIING ICON TO WEB APP BROWSER -->
+	<!-- iphones -->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/grow_logo_180x180.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/grow_logo_114x114.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/grow_logo_57x57.png">
+
+	<!-- OR use one generic renamed 180x180 png icon to rule them all | Easier but may not scale properly for all phone -->
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+</head>
+<body onload="readData();">
+
+    <div class="screen_change">
+
+        <div class="landscape_content">
+            <img src="img/landscape.svg" alt="Fallen Plant">
+            <p>For the best experience, please turn back to portrait mode!</p>
+        </div>
+
+        <div class="landscape_bg"></div>
+        
+    </div>
+
+   <section>
+
+        <div class="start_page">
+
+            <div class="question">
+                <p>Which plant is yours?</p>
+            </div>
+
+            <button id="backbutton">
+                <img src="img/back.svg" alt="">
+            </button>
+            <div id="chosen_plant_name" class="chosen_plant_name">
+                <p>Aloe</p>
+            </div>
+
+            <div class="plant_show">
+                <div id="blob">
+                    <img src="img/blob.png" alt="">
+                </div>
+
+                <div id="plant_bg" class="plant_bg">
+                    <img src="img/plant_bg.png" alt="">
+                </div>
+
+                <div id="plantimg">
+                    <img src="img/aloe.png" alt="">
+                </div>
+
+            </div>
+
+            <div id="whitecircle" class="white_circle"></div>
+
+            <div id="choose_plant" class="choose_plant">
+
+                <div id="plantname" class="plant_name">
+                    <p>Aloe</p>
+                </div>
+
+                <button id="selectplant" class="my_plant">
+                        <p>My Plant</p>
+                </button>
+
+            </div>
+
+
+            <div id="chosen_plant" class="chosen_plant">
+                
+                <div id="move_circle" class="main_circle">
+                    
+                    <svg id="progress_circle"  class="progress_circle">
+
+                        <linearGradient x1="0" y1="0" x2="100%" y2="100%" id="linear">
+                            <stop stop-color="#33CFDD" offset="0"/>
+                            <stop stop-color="#1DDBAF" offset="100%"/>
+                        </linearGradient>
+                        <circle class="circle" fill="url(#linear)" cx="100" cy="100" r="94"></circle>
+                    
+                    </svg>
+
+                    <svg class="inner_circle">
+
+                        <linearGradient x1="0" y1="0" x2="100%" y2="100%" id="gradient">
+                            <stop stop-color="#33CFDD" offset="0"/>
+                            <stop stop-color="#1DDBAF" offset="100%"/>
+                        </linearGradient>
+                        <circle fill="url(#gradient)"  class="innerCircle" cx="98" cy="98" r="88" ></circle>
+                    
+                    </svg>
+
+                    <div class="days_left">
+                        <form action="" id="dateContainer">
+                            <input type="date" name="date" id="date" >
+                            <span class="submit" id="go" value="Go" onclick="writeData()">Go</span>
+                        </form>
+                        <div id="days">
+                            <span id="daysLeft"></span>
+                            <p id="text">days left</p>
+                        </div>
+                        <div id="waterNow" onclick="restart()">
+                            <img src="img/waterdrop.svg" alt="">
+                            <p>Water!</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="water_cycle_guide">
+                    <p id="date_prompt">When did you last water your plant?</p>    
+                </div>
+
+                <div class="remove1Day">
+                    <button id="removebutton">
+                        <p>Remove 1 Day</p>
+                    </button>
+                </div>
+                
+                <div class="plant_info">
+                    <div class="each_info" id="sunlight">
+                        <img src="img/sunlight.svg" alt="">
+                        <p>Bright</p>
+                    </div>
+
+                    <div class="each_info" id="water">
+                        <img src="img/water.svg" alt="">
+                        <p>Every 9-14 Days</p>
+                    </div>
+
+                    <div class="each_info" id="temp">
+                        <img src="img/temp.svg" alt="">
+                        <p>60-75 F</p>
+                    </div>
+                </div>
+
+                <button id="resetbutton" onclick="removeData()">Reset</button>
+    
+            </div>
+
+        </div>
+
+    </section> 
+
+
+    <!-- JAVASCRIPT-->
+    <script type="text/javascript">
+        //Custom config setting before loading add2Home.js file
+        var addToHomeConfig = {
+          touchIcon: true
+        };
+      </script>
+      <script src="js/js-add2home.js"></script>
+      <script src="js/js-main.js"></script>  
+      <script src="js/main.js"></script>  
+
+
+</body>
+</html>

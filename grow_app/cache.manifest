@@ -1,0 +1,63 @@
+CACHE MANIFEST
+# version - 140120-15:41:17
+
+CACHE:
+
+# CSS
+css/css-add2home.css
+css/css-normalize.css
+css/style.css
+
+# IMAGES
+
+img/aloe_draft.png
+img/aloe.png
+img/apple-touch-icon.png
+img/blob.png
+img/g.png
+img/grow_logo_57x57.png
+img/grow_logo_114x114.png
+img/grow_logo_180x180.png
+img/grow_typography.psd
+img/hen_chick.png
+img/jade_plant.png
+img/landscape.ai
+img/landscape.svg
+img/o.png
+img/plant_bg.png
+img/r.png
+img/w.png
+img/zebra_plant.png
+img/sunlight.svg
+img/water.svg
+img/temp.svg
+img/back.svg
+
+# HTML FILES
+index.html
+
+# JAVASCRIPT - SPECIFIC ORDER
+js/js-add2home.js
+js/js-main.js
+js/js-refresh-manifest.js
+js/main.js
+
+#FONT
+
+font/airbnbcerealblack-webfont.woff
+font/airbnbcerealblack-webfont.woff2
+font/airbnbcerealbold-webfont.woff
+font/airbnbcerealbold-webfont.woff2
+font/airbnbcerealbook-webfont.woff
+font/airbnbcerealbook-webfont.woff2
+font/airbnbcerealextrabold-webfont.woff
+font/airbnbcerealextrabold-webfont.woff2
+font/airbnbcereallight-webfont.woff
+font/airbnbcereallight-webfont.woff2
+font/airbnbcerealmedium-webfont.woff
+font/airbnbcerealmedium-webfont.woff2
+
+
+## Any resources not listed above will require the user to be online.
+NETWORK:
+*

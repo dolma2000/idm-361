@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="107.536" height="120.981" viewBox="0 0 107.536 120.981">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d3fcff"/>
+      <stop offset="1" stop-color="#2aeabe"/>
+    </linearGradient>
+    <filter id="Path_34" x="0" y="0" width="107.536" height="120.981" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feFlood flood-opacity="0.098"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_34)">
+    <path id="Path_34-2" data-name="Path 34" d="M16.887-4.478c.315-.67.781-.827,1.177.132,9.174,16.808,16.8,18.56,16.8,32.013,0,9.813-7.665,16.291-17.478,16.291S-.669,37.479-.669,27.666C-.669,13.088,9,12.336,16.887-4.478Z" transform="translate(36.67 39.02)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
